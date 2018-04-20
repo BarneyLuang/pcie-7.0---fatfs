@@ -82,7 +82,6 @@ static uint16_t                         m_conn_handle = BLE_CONN_HANDLE_INVALID;
 
 static ble_uuid_t                       m_adv_uuids[] = {{BLE_UUID_NUS_SERVICE, NUS_SERVICE_UUID_TYPE}};  /**< Universally unique service identifier. */
 
-static bool flag_Rxcmd =false;
 
 //APP_TIMER_DEF(m_tick_timer_id);
 //APP_TIMER_DEF(m_key_timer_id);
@@ -157,7 +156,6 @@ static void gap_params_init(void)
 /**@snippet [Handling the data received over BLE] */
 static void nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)
 {		
-	
 		nus_data_handler_protocol_op((ble_cmd*)p_data,length);
 }
 /**@snippet [Handling the data received over BLE] */
@@ -240,20 +238,21 @@ static void conn_params_init(void)
  *
  * @note This function will not return.
  */
+#if 0
 static void sleep_mode_enter(void)
 {
-//    uint32_t err_code = bsp_indication_set(BSP_INDICATE_IDLE);
-//    APP_ERROR_CHECK(err_code);
+    uint32_t err_code = bsp_indication_set(BSP_INDICATE_IDLE);
+    APP_ERROR_CHECK(err_code);
 
-//    // Prepare wakeup buttons.
-//    err_code = bsp_btn_ble_sleep_mode_prepare();
-//    APP_ERROR_CHECK(err_code);
+    // Prepare wakeup buttons.
+    err_code = bsp_btn_ble_sleep_mode_prepare();
+    APP_ERROR_CHECK(err_code);
 
-//    // Go to system-off mode (this function will not return; wakeup will cause a reset).
-//    err_code = sd_power_system_off();
-//    APP_ERROR_CHECK(err_code);
+    // Go to system-off mode (this function will not return; wakeup will cause a reset).
+    err_code = sd_power_system_off();
+    APP_ERROR_CHECK(err_code);
 }
-
+#endif 
 
 /**@brief Function for handling advertising events.
  *
@@ -263,20 +262,20 @@ static void sleep_mode_enter(void)
  */
 static void on_adv_evt(ble_adv_evt_t ble_adv_evt)
 {
-    uint32_t err_code;
+//    uint32_t err_code;
 
-    switch (ble_adv_evt)
-    {
-        case BLE_ADV_EVT_FAST:
+//    switch (ble_adv_evt)
+//    {
+//        case BLE_ADV_EVT_FAST:
 //            err_code = bsp_indication_set(BSP_INDICATE_ADVERTISING);
 //            APP_ERROR_CHECK(err_code);
-            break;
-        case BLE_ADV_EVT_IDLE:
+//            break;
+//        case BLE_ADV_EVT_IDLE:
 //            sleep_mode_enter();
-            break;
-        default:
-            break;
-    }
+//            break;
+//        default:
+//            break;
+//    }
 }
 
 

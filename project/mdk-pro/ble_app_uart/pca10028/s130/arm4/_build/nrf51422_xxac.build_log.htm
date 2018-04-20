@@ -8,118 +8,85 @@ Project File Date:  04/08/2018
 
 <h2>Output:</h2>
 Build target 'nrf51422_xxac'
-compiling ble_nus.c...
-linking...
-Program Size: Code=22440 RO-data=9712 RW-data=228 ZI-data=15836  
-FromELF: creating hex file...
-".\_build\nrf51422_xxac.axf" - 0 Error(s), 0 Warning(s).
-Load "D:\\Pro\\Nrf51822\\pcie 7.0 - fatfs\\project\\mdk-pro\\ble_app_uart\\pca10028\\s130\\arm4\\_build\\nrf51422_xxac.axf" 
-Set JLink Project File to "D:\Pro\Nrf51822\pcie 7.0 - fatfs\project\mdk-pro\ble_app_uart\pca10028\s130\arm4\JLinkSettings.ini"
-* JLink Info: Device "NRF51822_XXAB" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Jul 24 2017 17:30:12
-Hardware: V1.00
-S/N : 681174707 
- 
-* JLink Info: Found SWD-DP with ID 0x0BB11477
-* JLink Info: Found Cortex-M0 r0p0, Little endian.
-* JLink Info: FPUnit: 4 code (BP) slots and 0 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ F0000000
-* JLink Info: ROMTbl 0 [0]: F00FF000, CID: B105100D, PID: 000BB471 ROM Table
-* JLink Info: ROMTbl 1 @ E00FF000
-* JLink Info: ROMTbl 1 [0]: FFF0F000, CID: B105E00D, PID: 000BB008 SCS
-* JLink Info: ROMTbl 1 [1]: FFF02000, CID: B105E00D, PID: 000BB00A DWT
-* JLink Info: ROMTbl 1 [2]: FFF03000, CID: B105E00D, PID: 000BB00B FPB
-* JLink Info: ROMTbl 0 [1]: 00002000, CID: B105900D, PID: 000BB9A3 ???
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: nRF51822_xxAB
-VTarget = 3.300V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 4
-Software-Breakpoints: 8192
-Watchpoints:          2
-JTAG speed: 1000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-</pre>
-</body>
-</html>
----------
-Device: nRF51822_xxAB
-VTarget = 3.300V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 4
-Software-Breakpoints: 8192
-Watchpoints:          2
-JTAG speed: 1000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-Load "D:\\Pro\\Nrf51822\\pcie 7.0 - fatfs\\project\\mdk-pro\\ble_app_uart\\pca10028\\s130\\arm4\\_build\\nrf51422_xxac.axf" 
-Set JLink Project File to "D:\Pro\Nrf51822\pcie 7.0 - fatfs\project\mdk-pro\ble_app_uart\pca10028\s130\arm4\JLinkSettings.ini"
-* JLink Info: Device "NRF51822_XXAB" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Jul 24 2017 17:30:12
-Hardware: V1.00
-S/N : 681174707 
- 
-* JLink Info: Found SWD-DP with ID 0x0BB11477
-* JLink Info: Found Cortex-M0 r0p0, Little endian.
-* JLink Info: FPUnit: 4 code (BP) slots and 0 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ F0000000
-* JLink Info: ROMTbl 0 [0]: F00FF000, CID: B105100D, PID: 000BB471 ROM Table
-* JLink Info: ROMTbl 1 @ E00FF000
-* JLink Info: ROMTbl 1 [0]: FFF0F000, CID: B105E00D, PID: 000BB008 SCS
-* JLink Info: ROMTbl 1 [1]: FFF02000, CID: B105E00D, PID: 000BB00A DWT
-* JLink Info: ROMTbl 1 [2]: FFF03000, CID: B105E00D, PID: 000BB00B FPB
-* JLink Info: ROMTbl 0 [1]: 00002000, CID: B105900D, PID: 000BB9A3 ???
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: nRF51822_xxAB
-VTarget = 3.300V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 4
-Software-Breakpoints: 8192
-Watchpoints:          2
-JTAG speed: 1000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-imer.c...
-compiling app_uart_fifo.c...
-compiling app_util_platform.c...
-compiling fstorage.c...
-compiling hardfault_implementation.c...
-compiling nrf_assert.c...
-compiling retarget.c...
-compiling sdk_errors.c...
-compiling nrf_log_backend_serial.c...
-compiling nrf_log_frontend.c...
-compiling SEGGER_RTT.c...
-compiling softdevice_handler.c...
+compiling main.c...
+..\..\..\main.c(599): warning:  #223-D: function "led_func" declared implicitly
+        led_func();
+..\..\..\main.c(606): warning:  #550-D: variable "err_code" was set but never used
+        uint32_t err_code;
+..\..\..\main.c(524): warning:  #177-D: function "uart_init" was declared but never referenced
+  static void uart_init(void)
+..\..\..\main.c: 3 warnings, 0 errors
+compiling memory_interface.c...
+..\..\..\..\src\memory_interface.c(466): warning:  #167-D: argument of type "BYTE *" is incompatible with parameter of type "const char *"
+                        uart_tx_data(ReadBuffer,strlen(ReadBuffer));    
+..\..\..\..\src\memory_interface.c(450): warning:  #550-D: variable "ff_result" was set but never used
+        FRESULT ff_result;
+..\..\..\..\src\memory_interface.c(484): warning:  #550-D: parameter "data" was set but never used
+  void read_file_data_for_line( TCHAR *path_name,uint32_t line,uint8_t *data)
+..\..\..\..\src\memory_interface.c(487): warning:  #550-D: variable "ff_result" was set but never used
+        FRESULT ff_result;
+..\..\..\..\src\memory_interface.c(527): warning:  #177-D: variable "char_result" was declared but never referenced
+        TCHAR *char_result;
+..\..\..\..\src\memory_interface.c(670): warning:  #177-D: variable "pf" was declared but never referenced
+                FIL *pf = &file;
+..\..\..\..\src\memory_interface.c(672): warning:  #177-D: variable "dirs" was declared but never referenced
+                DIR dirs;
+..\..\..\..\src\memory_interface.c(674): warning:  #550-D: variable "ff_result" was set but never used
+      FRESULT ff_result;
+..\..\..\..\src\memory_interface.c(694): warning:  #177-D: variable "pf" was declared but never referenced
+        FIL *pf = &file;
+..\..\..\..\src\memory_interface.c(695): warning:  #177-D: variable "dirs" was declared but never referenced
+        DIR dirs;
+..\..\..\..\src\memory_interface.c: 10 warnings, 0 errors
+compiling cmdiphonesp.c...
+compiling ble_cmd_op.c...
+..\..\..\..\src\ble_cmd_op.c(227): error:  #136: struct "<unnamed>" has no field "cmd_num"
+        tx_data.cmd_num = data->cmd_num;
+..\..\..\..\src\ble_cmd_op.c(227): error:  #136: struct "<unnamed>" has no field "cmd_num"
+        tx_data.cmd_num = data->cmd_num;
+..\..\..\..\src\ble_cmd_op.c(228): error:  #136: struct "<unnamed>" has no field "index"
+        tx_data.index = data->index;
+..\..\..\..\src\ble_cmd_op.c(228): error:  #136: struct "<unnamed>" has no field "index"
+        tx_data.index = data->index;
+..\..\..\..\src\ble_cmd_op.c(249): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "TCHAR *"
+                read_file_data_for_line( phone8sp_txt_file,data->data[0],uart_tx_buff);
+..\..\..\..\src\ble_cmd_op.c(251): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                uart_tx_data(uart_tx_buff,strlen(uart_tx_buff));                
+..\..\..\..\src\ble_cmd_op.c(220): warning:  #177-D: variable "battery" was declared but never referenced
+        uint16_t battery = 300;
+..\..\..\..\src\ble_cmd_op.c(221): warning:  #177-D: variable "current" was declared but never referenced
+        uint16_t current = 1000;//ma
+..\..\..\..\src\ble_cmd_op.c(223): warning:  #177-D: variable "offset" was declared but never referenced
+        uint8_t offset = 16;
+..\..\..\..\src\ble_cmd_op.c(268): error:  #20: identifier "tx_data" is undefined
+        tx_data.cmd_num = 1;
+..\..\..\..\src\ble_cmd_op.c(270): error:  #136: struct "<unnamed>" has no field "cmd_num"
+        if(data->cmd_num == data->index)
+..\..\..\..\src\ble_cmd_op.c(270): error:  #136: struct "<unnamed>" has no field "index"
+        if(data->cmd_num == data->index)
+..\..\..\..\src\ble_cmd_op.c(289): error:  #20: identifier "CMD" is undefined
+         case CMD
+..\..\..\..\src\ble_cmd_op.c(290): error:  #53: expected a ":"
+         default:break;
+..\..\..\..\src\ble_cmd_op.c(293): error: At end of source:  #67: expected a "}"
+..\..\..\..\src\ble_cmd_op.c: 5 warnings, 10 errors
+compiling key.c...
+compiling power.c...
+..\..\..\..\src\power.c(41): warning:  #550-D: variable "PwrAdcData_c3" was set but never used
+        uint16_t PwrAdcData_c3,PwrAdcData_c2;
+..\..\..\..\src\power.c(41): warning:  #550-D: variable "PwrAdcData_c2" was set but never used
+        uint16_t PwrAdcData_c3,PwrAdcData_c2;
+..\..\..\..\src\power.c(97): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\..\src\power.c(14): warning:  #177-D: function "adc_event_handler" was declared but never referenced
+  static void adc_event_handler(nrf_drv_adc_evt_t const * p_event)
+..\..\..\..\src\power.c: 4 warnings, 0 errors
+compiling sys_task.c...
+..\..\..\..\src\sys_task.c(105): warning:  #223-D: function "led_func" declared implicitly
+        led_func();
+..\..\..\..\src\sys_task.c: 1 warning, 0 errors
+compiling led.c...
+compiling ble_conn_params.c...
 compiling diskio.c...
 ..\..\..\..\FatFS_1\src\diskio.c(196): warning:  #111-D: statement is unreachable
                         break;
@@ -129,46 +96,8 @@ compiling diskio.c...
         DWORD nFrom,nTo;
 ..\..\..\..\FatFS_1\src\diskio.c: 3 warnings, 0 errors
 compiling ff.c...
-linking...
-Program Size: Code=22440 RO-data=9712 RW-data=228 ZI-data=15836  
-FromELF: creating hex file...
-".\_build\nrf51422_xxac.axf" - 0 Error(s), 22 Warning(s).
-Load "D:\\Pro\\Nrf51822\\pcie 7.0 - fatfs\\project\\mdk-pro\\ble_app_uart\\pca10028\\s130\\arm4\\_build\\nrf51422_xxac.axf" 
-Set JLink Project File to "D:\Pro\Nrf51822\pcie 7.0 - fatfs\project\mdk-pro\ble_app_uart\pca10028\s130\arm4\JLinkSettings.ini"
-* JLink Info: Device "NRF51822_XXAB" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Jul 24 2017 17:30:12
-Hardware: V1.00
-S/N : 681174707 
- 
-* JLink Info: Found SWD-DP with ID 0x0BB11477
-* JLink Info: Found Cortex-M0 r0p0, Little endian.
-* JLink Info: FPUnit: 4 code (BP) slots and 0 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ F0000000
-* JLink Info: ROMTbl 0 [0]: F00FF000, CID: B105100D, PID: 000BB471 ROM Table
-* JLink Info: ROMTbl 1 @ E00FF000
-* JLink Info: ROMTbl 1 [0]: FFF0F000, CID: B105E00D, PID: 000BB008 SCS
-* JLink Info: ROMTbl 1 [1]: FFF02000, CID: B105E00D, PID: 000BB00A DWT
-* JLink Info: ROMTbl 1 [2]: FFF03000, CID: B105E00D, PID: 000BB00B FPB
-* JLink Info: ROMTbl 0 [1]: 00002000, CID: B105900D, PID: 000BB9A3 ???
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: nRF51822_xxAB
-VTarget = 3.300V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 4
-Software-Breakpoints: 8192
-Watchpoints:          2
-JTAG speed: 1000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
+".\_build\nrf51422_xxac.axf" - 10 Error(s), 26 Warning(s).
+Target not created
+</pre>
+</body>
+</html>

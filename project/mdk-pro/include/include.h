@@ -52,10 +52,6 @@
 
 #define  FIRMWARE_VERSION        					101
 
-
-
-
-
 /*service */
 #include "ble_nus.h"                                /**< UART RX buffer size. */
 

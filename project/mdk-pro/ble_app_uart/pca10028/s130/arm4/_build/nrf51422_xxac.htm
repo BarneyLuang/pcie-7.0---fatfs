@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\_build\nrf51422_xxac.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\_build\nrf51422_xxac.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Tue Apr 10 16:17:34 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Fri Apr 20 17:35:03 2018
 <BR><P>
 <H3>Maximum Stack Usage =        648 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -682,15 +682,15 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_ble_evt
 </UL>
 
-<P><STRONG><a name="[8c]"></a>ble_cmd_getbattery</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, ble_cmd_op.o(i.ble_cmd_getbattery))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = ble_cmd_getbattery &rArr; ble_nus_string_send
+<P><STRONG><a name="[8c]"></a>ble_cmd_getbattery</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, ble_cmd_op.o(i.ble_cmd_getbattery))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ble_cmd_getbattery &rArr; ble_nus_string_send
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_nus_string_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nus_data_handler_protocol_op
 </UL>
 
-<P><STRONG><a name="[8e]"></a>ble_cmd_getversion</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, ble_cmd_op.o(i.ble_cmd_getversion))
+<P><STRONG><a name="[8e]"></a>ble_cmd_getversion</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ble_cmd_op.o(i.ble_cmd_getversion))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ble_cmd_getversion &rArr; ble_nus_string_send
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_nus_string_send

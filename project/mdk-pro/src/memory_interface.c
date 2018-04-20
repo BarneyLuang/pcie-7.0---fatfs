@@ -449,12 +449,13 @@ void read_file_for_line( TCHAR *path_name,uint32_t line)
 	uint32_t resize = 4096;
 	FRESULT ff_result;
 	TCHAR *char_result;
+	uint8_t index=0;
 	FIL *pf ;
 	pf =  &file;	
 	
 	ff_result = f_open(pf,path_name,FA_READ | FA_WRITE );
 	memset(ReadBuffer,0,sizeof(ReadBuffer));
-	uint8_t index=0;
+	
 	while(1)
 	{
 		char_result= f_gets ((TCHAR *)ReadBuffer,	resize,		pf	);	
@@ -463,6 +464,45 @@ void read_file_for_line( TCHAR *path_name,uint32_t line)
 		if(index==line)
 		{
 			uart_tx_data(ReadBuffer,strlen(ReadBuffer));	
+		}
+		if(char_result==0)  
+		{
+			f_close(pf);
+			break;
+		}		
+	}
+}
+
+
+/*******************************************************************************
+*Function			:read_file_data_for_line( TCHAR *path_name,uint32_t line)
+*Descriptor		: 
+*Input				: none
+*Return				: none
+*Hist					:
+*******************************************************************************/
+void read_file_data_for_line( TCHAR *path_name,uint32_t line,uint8_t *data)
+{
+	uint32_t resize = 4096;
+	FRESULT ff_result;
+	TCHAR *char_result;
+	uint8_t index=0;
+	FIL *pf ;
+	pf =  &file;	
+	
+	ff_result = f_open(pf,path_name,FA_READ | FA_WRITE );
+	memset(ReadBuffer,0,sizeof(ReadBuffer));
+	
+	while(1)
+	{
+		char_result= f_gets ((TCHAR *)ReadBuffer,	resize,		pf	);	
+//		NRF_LOG_RAW_HEXDUMP_INFO(ReadBuffer,strlen(ReadBuffer));	
+		index++;
+		if(index==line)
+		{
+			data = ReadBuffer;
+			//uart_tx_data(ReadBuffer,strlen(ReadBuffer));	
+			return ;
 		}
 		if(char_result==0)  
 		{

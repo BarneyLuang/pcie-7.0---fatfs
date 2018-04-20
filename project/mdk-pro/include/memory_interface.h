@@ -111,8 +111,9 @@ void read_dir(DIR *dirs);
 void write_file(FIL *pf , TCHAR *path_name,const uint8_t *data,uint32_t data_size);
 void read_file( TCHAR *path_name);
 void read_file_for_line( TCHAR *path_name,uint32_t line);
-
+void read_file_data_for_line( TCHAR *path_name,uint32_t line,uint8_t *data);
 void delete_file(void);
+
 void W25X_Read_Sector(uint32_t nSector, uint8_t * pBuffer);
 void W25X_Write_Sector(uint32_t nSector, uint8_t* pBuffer);
 
