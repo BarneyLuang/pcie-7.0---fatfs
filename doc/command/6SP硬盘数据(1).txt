@@ -1,0 +1,35 @@
+SN：F4GQ9JSZGRY5
+型号：MKQJ2B/A
+WIFI: CC:20:E8:7A:D0:B2
+蓝牙：CC:20:E8:7A:D0:B3
+IMEI: 353267072954173
+
+底层数据：
+序列号
+syscfg add SrNm F4GQ9JSZGRY5
+监管
+syscfg add Mod# MKQJ2
+国家
+syscfg add Regn CH/A
+型号
+syscfg add RMd# A1699
+WiFi
+syscfg add WMac 0x7AE820CC 0x0000B2D0 0x00000000 0x00000000
+蓝牙
+syscfg add BMac 0x7AE820CC 0x0000B3D0 0x00000000 0x00000000
+颜色
+syscfg delete CLHS.                        syscfg add DClr 0x00000200 0x00DADCDB 0x00E4E7E8 0x00000000
+指纹码
+syscfg add NvSn 111111111111111111
+液晶码
+syscfg add LCM# 1111111111111111111111111111111111111111
+电池码
+syscfg add Batt 11111111111111111
+后相机
+syscfg add BCMS 11111111111111111
+前相机
+syscfg add FCMS 11111111111111111
+
+主板码（暂时用不到）
+syscfg add MLB# 11111111111111111111
+
